@@ -1,27 +1,65 @@
-# TaskBoard
+# Angular Calendar App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+This project is an Angular-based calendar application that allows users to navigate through dates and days and add tasks to specific days. It serves as a simple task management tool with an intuitive interface for handling daily tasks.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+  * Date Navigation: Users can navigate through months and days, moving forward and backward in the calendar.
+  * Task Management: Users can add, view, and manage tasks for specific days.
+  * Responsive Design: The application is fully responsive, adjusting seamlessly to different screen sizes.
+    
+## Technologies Used
 
-## Code scaffolding
+  * Angular: A popular framework for building single-page applications.
+  * TypeScript: Superset of JavaScript used for the logic and functionality.
+  * HTML5: For the structure of the app.
+  * CSS3: For styling the user interface.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+Follow these instructions to set up the project locally.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Prerequisites
 
-## Running unit tests
+  * Node.js: Make sure you have Node.js installed. [Download Node.js](https://nodejs.org/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  * Angular CLI: Install Angular CLI globally using the following command:
+    ```
+    npm install -g @angular/cli
+    ```
+## Installation
 
-## Running end-to-end tests
+  ### 1. Clone the repository :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  ```
+  git clone https://github.com/MOQRAN/calendar.git
+  ```
 
-## Further help
+### 2. Install the required dependencies:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  ```
+  npm install
+  ```
+
+## Running the Application
+
+ To start the development server, run:
+
+  ```
+  ng serve
+  ```
+ Once the server starts, open your browser and go to:
+
+  ```
+  http://localhost:4200/
+  ```
+
+You should now see the calendar application.
+
+## Building the Application
+
+To build the project for production, use the command:
+
+  ```
+  ng build
+  ```
