@@ -1,0 +1,119 @@
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+}
+#controlPanel{
+  position: relative;
+  background-color: #DE1B73;
+
+  margin-top: 0;
+  font: 700;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1{
+    color: white;
+    font-size: 3em;
+  }
+}
+#dateSelector{
+
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 15%;
+  h2{
+    color: #525051;
+  }
+
+}
+#monthSelector{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  button{
+
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+    margin-right: 10%;
+    box-shadow: 1px 1px 6px 2px #cac7c9;
+    border-radius:10px;
+
+
+  }
+  button:hover{
+    background-color: #f1f1f1;
+    box-shadow: 2px 2px 14px 2px #cac7c9d5;
+
+  }
+}
+#dates{
+  /* background: #613030; */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-spacing: 10%;
+
+
+
+
+  th,td{
+    /* border-color: #525051; */
+    /* border-style: solid;*/
+    text-align: center;
+    background-clip: padding-box;
+    width: 5vw;
+    height: 5vh;
+    /* padding: 4vw; */
+
+
+  }
+  .outlet{
+    color: #c6c6c6;
+  }
+  .selected{
+    background-color: #f3f3f3;
+    border-color: #5c5c5c;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+  }
+  .selected:hover{
+    background-color: #6a6a6a;
+  }
+
+}
+.dateBtn{
+
+  border: none;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+.dateBtn:hover{
+   background-color: #6a6a6a;
+
+
+}
+
+
+.card {
+  overflow: hidden;
+}
+.addTaskBtn{
+  margin-left: 80%;
+  margin-top: 5%;
+  width: 20%;
+  height: 40%;
+  background:  rgb(99, 215, 99);
+  color: white;
+}
