@@ -13,7 +13,7 @@ export class AppComponent {
   selectedDate = new Date();
   selectedMonth = new Date();
   today = new Date();
-  tasks:any;
+  taskList:any;
 
   dates = Array(42).fill(new Date());
   // dates=Array().fill(0);
@@ -23,7 +23,7 @@ export class AppComponent {
     private changeDetectorRef: ChangeDetectorRef,
     private taskService: TaskService
   ) {
-    this.tasks=taskService.tasks;
+    // this.taskList = taskService.tasks;
   }
   ngOnInit() {
     this.updateDates();
@@ -67,5 +67,12 @@ export class AppComponent {
     console.log(this.selectedMonth);
 
     this.changeDetectorRef.detectChanges();
+  }
+  displayTaskList(day: Date) {
+    console.log('day: ',day.toDateString())
+    this.taskList = this.taskService.tasks.find(
+      (taskList) => taskList.day.toDateString() === day.toDateString()
+    )?.taskList;
+    console.log(this.taskList);
   }
 }

@@ -52,6 +52,7 @@
           [ngbPopover]="popContent"
           [popoverTitle]="popTitle"
           container="body"
+          (click)="displayTaskList(d)"
         >
           {{ d | date : "dd" }}
         </button>
@@ -65,8 +66,8 @@
   <mat-card appearance="outlined">
     <mat-card-content>
       <ul>
-        <li *ngFor="let task of tasks">
-          {{task.name}}
+        <li *ngFor="let task of taskList">
+          {{task!.name}}
         </li>
 
       </ul>
