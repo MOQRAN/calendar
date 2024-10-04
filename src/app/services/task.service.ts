@@ -1,37 +1,23 @@
 import { Injectable } from '@angular/core';
+import { TasksOfADay } from '../models/tasksOfADay.model';
+import { Task } from '../models/task.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
-  tasks = [
-    {
-      day: new Date(),
-      taskList: [
-        {
-          id: 0,
-          name: 'task 0',
-          priority: 'heigh',
-          time: '',
-          duration: 40,
-        },
-        {
-          id: 1,
-          name: 'task 1',
-          priority: 'heigh',
-          time: '',
-          duration: 40,
-        },
-        {
-          id: 0,
-          name: 'task 2',
-          priority: 'heigh',
-          time: '',
-          duration: 40,
-        },
-      ],
-    },
-  ];
+  tasks!: TasksOfADay[];
 
-  constructor() {}
+  constructor() {
+    this.tasks=[];
+  }
+  addTask() {
+
+    this.tasks.push({
+      day: new Date(),
+      taskList: [ ],
+    });
+    const task=new Task(0, 'task 0', 'heigh', new Date(), 40);
+    this.tasks[0].taskList.push(task);
+  }
 }

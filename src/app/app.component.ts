@@ -64,15 +64,20 @@ export class AppComponent {
     this.selectedMonth = new Date(currentMonth);
     this.updateDates();
 
-    console.log(this.selectedMonth);
+    // console.log(this.selectedMonth);
 
     this.changeDetectorRef.detectChanges();
   }
   displayTaskList(day: Date) {
-    console.log('day: ',day.toDateString())
+    // console.log('day: ',day.toDateString());
     this.taskList = this.taskService.tasks.find(
       (taskList) => taskList.day.toDateString() === day.toDateString()
     )?.taskList;
-    console.log(this.taskList);
+    // console.log(this.taskList);
+  }
+  onAddTask(){
+    console.log('before addTask:',this.taskService.tasks);
+    this.taskService.addTask();
+    console.log('after addTask:',this.taskService.tasks);
   }
 }
