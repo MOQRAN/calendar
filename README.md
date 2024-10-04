@@ -63,3 +63,50 @@ To build the project for production, use the command:
   ```
   ng build
   ```
+The build artifacts will be stored in the `dist/` directory.
+
+## Usage
+
+  * Navigating through the calendar: Use the previous and next buttons to move between months.
+  * Adding tasks: Select a day on the calendar and input your task into the provided field.
+  * Viewing tasks: Click on a day with tasks to view the details.
+
+## Folder Structure
+```
+src/
+├── app/
+│   ├── models/
+│   │   └── task.model.ts            # task's properties
+│   │   └── tasksOfADay.model.ts     # all the tasks of a given day's properties
+│   ├── services/                    # Services for handling task storage and logic
+│   └── app.module.ts                # Main module of the application
+├── assets/                          # Images, icons, etc.
+├── environments/                    # Environment settings for dev/production
+└── index.html                       # Entry point for the web app
+```
+
+
+## Contributing
+
+If you'd like to contribute to this project, feel free to submit a pull request. Contributions are always welcome!
+
+  ### 1. Fork the repository
+  ### 2. Create a new branch `git checkout -b feature/your-feature`
+  ### 3. Commit your changes `git commit -m 'Add some feature`
+  ### 4. Push to the branch `git push origin feature/your-feature`
+  ### 5. Open a pull request
+
+
+
+## Contact
+
+For any questions or suggestions, feel free to reach out at:
+
+***Mohammed MOQRAN***
+
+mohammedmoqran18@gmail.com
+:grin:
+
+
+
+
