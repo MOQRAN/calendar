@@ -1,0 +1,82 @@
+<header>
+  <div id="controlPanel">
+    <h1>
+      {{ selectedDate | date }}
+    </h1>
+  </div>
+</header>
+<div id="dateSelector">
+  <table id="monthSelector">
+    <tr>
+      <td>
+        <button mat-fab (click)="previousMonth()">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+      </td>
+      <td>
+        <h2>{{ selectedMonth | date : "MMMM   y" }}</h2>
+      </td>
+
+      <td>
+        <button (click)="nextMonth()" mat-fab>
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </td>
+    </tr>
+  </table>
+
+  <table id="dates">
+    <tr>
+      <th>Sun</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wen</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+    </tr>
+    <tr *ngFor="let w of [0, 1, 2, 3, 4, 5]; let i = index">
+      <td
+        *ngFor="let d of dates.slice(i * 7, i * 7 + 7); let j = index"
+
+      >
+        <button
+        [ngClass]="{
+          outlet: isDifferentMonth(d),
+          selected: isToday(d)
+        }"
+          class="dateBtn"
+          type="button"
+
+          placement="bottom"
+          [ngbPopover]="popContent"
+          [popoverTitle]="popTitle"
+          container="body"
+          (click)="displayTaskList(d)"
+        >
+          {{ d | date : "dd" }}
+        </button>
+
+        <ng-template #popTitle>{{ d | date : "EEEE, MMMM d, y" }}</ng-template>
+      </td>
+    </tr>
+  </table>
+</div>
+<ng-template #popContent>
+  <mat-card appearance="outlined">
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let task of taskList">
+          {{task!.name}}
+        </li>
+
+      </ul>
+    </mat-card-content>
+  </mat-card>
+
+  <button (click)="onAddTask()" class="addTaskBtn"  mat-fab>
+    <mat-icon>add</mat-icon>
+  </button>
+</ng-template>
+
+<router-outlet></router-outlet>
