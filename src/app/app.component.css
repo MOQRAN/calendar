@@ -106,9 +106,9 @@ header{
 }
 
 
-.card {
+/* .card {
   overflow: hidden;
-}
+} */
 .addTaskBtn{
   margin-left: 80%;
   margin-top: 5%;
@@ -116,4 +116,8 @@ header{
   height: 40%;
   background:  rgb(99, 215, 99);
   color: white;
+}
+
+.newTaskInput{
+  width: 80vw;
 }

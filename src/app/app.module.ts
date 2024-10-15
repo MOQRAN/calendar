@@ -10,6 +10,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,8 @@ import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    MatInputModule,
+    MatGridListModule,
     NgbModule,
     NgbPopoverModule
 

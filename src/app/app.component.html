@@ -51,6 +51,7 @@
           placement="bottom"
           [ngbPopover]="popContent"
           [popoverTitle]="popTitle"
+          popoverClass="taskList"
           container="body"
           (click)="displayTaskList(d)"
         >
@@ -74,9 +75,20 @@
     </mat-card-content>
   </mat-card>
 
-  <button (click)="onAddTask()" class="addTaskBtn"  mat-fab>
-    <mat-icon>add</mat-icon>
-  </button>
+  <mat-grid-list class="newTask" cols="2" rowHeight="2:1">
+    <mat-grid-tile class="newTaskInput">
+      <mat-form-field class="">
+        <mat-label>Favorite food</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="Sushi" >
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button (click)="onAddTask()" class="addTaskBtn"  mat-fab>
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
 </ng-template>
 
 <router-outlet></router-outlet>
